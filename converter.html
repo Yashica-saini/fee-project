@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            const container2 = document.querySelector('.container2');
+            container2.classList.toggle('open-menu');
+        }
+
+        function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+    
+            const conversionRates = {
+                'USD': 1, 'EUR': 0.94, 'GBP': 0.81, 'INR': 83.00, 'CAD': 1.37, 
+                'AUD': 1.54, 'JPY': 148.77, 'CNY': 7.32, 'CHF': 0.91, 'NZD': 1.67, 
+                'SGD': 1.37, 'ZAR': 19.22, 'BRL': 5.06, 'RUB': 97.57, 'AED': 3.67,
+                'SEK': 10.73, 'NOK': 11.02, 'DKK': 7.01, 'PLN': 4.31, 'TRY': 27.47,
+                'THB': 35.93, 'MYR': 4.70, 'HKD': 7.81, 'MXN': 17.50, 'PHP': 56.14, 
+                'KRW': 1330.75, 'IDR': 15670, 'EGP': 30.88, 'SAR': 3.75, 'ILS': 3.85, 
+                'KWD': 0.31, 'BHD': 0.38, 'OMR': 0.39, 'QAR': 3.64, 'VND': 24300, 
+                'ARS': 370.00, 'CLP': 930.50, 'COP': 4185.00, 'TWD': 32.25, 'CZK': 22.02
+            }; 
+    
+            document.getElementById('result').innerHTML = "";
+    
+            const convertedAmount = (amount / conversionRates[fromCurrency]) * conversionRates[toCurrency];
+            document.getElementById('result').innerHTML = 
+                `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
+        }
+
+        function clearFields() {
+            document.getElementById('amount').value = "";
+            document.getElementById('result').innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            <img align="left" width="90" height="90" src="C:\Users\yashi\Downloads\DALL·E 2024-10-21 00.22.06 - A professional and sleek logo for a currency converter application (1).webp" class="logo">
+            <ul>
+                <li><font size="6"><a href="aboutus.html">Converter</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="history.html">History</a></li></font>
+            </ul>
+            <img onclick="toggleMenu()" align="right" width="50" src="C:\Users\yashi\Downloads\profileimage.jpg" class="logo">
+            
+            <div class="container2">
+                <div class="menu">
+                    <div class="menu2">
+                        <img width="100" height="100" src="C:\Users\yashi\Downloads\profileimage.jpg">
+                        <h2> Robot</h2>
+                    </div>
+                    <hr>
+                    <a href="signin.html" class="menu-link">
+                        <img width="30" height="30" src="C:\Users\yashi\Downloads\profile2.jpg">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="helpandsupport.html" class="menu-link">
+                        <img width="30" height="30" src="C:\Users\yashi\Downloads\help">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+                    <a href="login copy.html" class="menu-link">
+                        <img width="30" height="30" src="C:\Users\yashi\Downloads\logout">
+                        <p>Logout</p>
+                        <span>></span></a>
+                   </div>
+            </div>
+        </nav>
+    </div><br><br>
+    
+    <h1 ><b>Currency Converter</b></h1><br>
+    <p>Check live foreign currency exchange rates</p><br>
+    <div class="converter">
+        
+        <div class="input-group"><br>
+        <h2><font size="6"><b>Amount &nbsp;</b></h2><br></font>
+        
+        <input type="number" placeholder=" " id="amount" style="width: 72%" class="input-field">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="input-group"><h2><b><font size="6">From &nbsp;</b></h2><br></font>
+        <select name="From" id="fromCurrency" class="option">
+            <option value="USD">US Dollar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="INR">Indian Rupee (INR)</option>
+            <option value="GBP">British Pound (GBP)</option>
+            <option value="CAD">Canadian Dollar (CAD)</option>
+            <option value="AUD">Australian Dollar (AUD)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="CNY">Chinese Yuan (CNY)</option>
+            <option value="CHF">Swiss Franc (CHF)</option>
+            <option value="NZD">New Zealand Dollar (NZD)</option>
+            <option value="SGD">Singapore Dollar (SGD)</option>
+            <option value="ZAR">South African Rand (ZAR)</option>
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="RUB">Russian Ruble (RUB)</option>
+            <option value="AED">United Arab Emirates Dirham (AED)</option>
+            <option value="SEK">Swedish Krona (SEK)</option>
+            <option value="NOK">Norwegian Krone (NOK)</option>
+            <option value="DKK">Danish Krone (DKK)</option>
+            <option value="PLN">Polish Zloty (PLN)</option>
+            <option value="TRY">Turkish Lira (TRY)</option>
+            <option value="THB">Thai Baht (THB)</option>
+            <option value="MYR">Malaysian Ringgit (MYR)</option>
+            <option value="HKD">Hong Kong Dollar (HKD)</option>
+            <option value="MXN">Mexican Peso (MXN)</option>
+            <option value="PHP">Philippine Peso (PHP)</option>
+            <option value="KRW">South Korean Won (KRW)</option>
+            <option value="IDR">Indonesian Rupiah (IDR)</option>
+            <option value="EGP">Egyptian Pound (EGP)</option>
+            <option value="SAR">Saudi Riyal (SAR)</option>
+            <option value="ILS">Israeli Shekel (ILS)</option>
+            <option value="KWD">Kuwaiti Dinar (KWD)</option>
+            <option value="BHD">Bahraini Dinar (BHD)</option>
+            <option value="OMR">Omani Rial (OMR)</option>
+            <option value="QAR">Qatari Riyal (QAR)</option>
+            <option value="VND">Vietnamese Dong (VND)</option>
+            <option value="ARS">Argentine Peso (ARS)</option>
+            <option value="CLP">Chilean Peso (CLP)</option>
+            <option value="COP">Colombian Peso (COP)</option>
+            <option value="TWD">New Taiwan Dollar (TWD)</option>
+            <option value="CZK">Czech Koruna (CZK)</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="input-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2><b><font size="6">To &nbsp;</b></h2><br></font>
+        <select
+
+        <select name="To" id="toCurrency" class="option">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <option value="USD">US Dollar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="INR">Indian Rupee (INR)</option>
+            <option value="GBP">British Pound (GBP)</option>
+            <option value="CAD">Canadian Dollar (CAD)</option>
+            <option value="AUD">Australian Dollar (AUD)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="CNY">Chinese Yuan (CNY)</option>
+            <option value="CHF">Swiss Franc (CHF)</option>
+            <option value="NZD">New Zealand Dollar (NZD)</option>
+            <option value="SGD">Singapore Dollar (SGD)</option>
+            <option value="ZAR">South African Rand (ZAR)</option>
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="RUB">Russian Ruble (RUB)</option>
+            <option value="AED">United Arab Emirates Dirham (AED)</option>
+            <option value="SEK">Swedish Krona (SEK)</option>
+            <option value="NOK">Norwegian Krone (NOK)</option>
+            <option value="DKK">Danish Krone (DKK)</option>
+            <option value="PLN">Polish Zloty (PLN)</option>
+            <option value="TRY">Turkish Lira (TRY)</option>
+            <option value="THB">Thai Baht (THB)</option>
+            <option value="MYR">Malaysian Ringgit (MYR)</option>
+            <option value="HKD">Hong Kong Dollar (HKD)</option>
+            <option value="MXN">Mexican Peso (MXN)</option>
+            <option value="PHP">Philippine Peso (PHP)</option>
+            <option value="KRW">South Korean Won (KRW)</option>
+            <option value="IDR">Indonesian Rupiah (IDR)</option>
+            <option value="EGP">Egyptian Pound (EGP)</option>
+            <option value="SAR">Saudi Riyal (SAR)</option>
+            <option value="ILS">Israeli Shekel (ILS)</option>
+            <option value="KWD">Kuwaiti Dinar (KWD)</option>
+            <option value="BHD">Bahraini Dinar (BHD)</option>
+            <option value="OMR">Omani Rial (OMR)</option>
+            <option value="QAR">Qatari Riyal (QAR)</option>
+            <option value="VND">Vietnamese Dong (VND)</option>
+            <option value="ARS">Argentine Peso (ARS)</option>
+            <option value="CLP">Chilean Peso (CLP)</option>
+            <option value="COP">Colombian Peso (COP)</option>
+            <option value="TWD">New Taiwan Dollar (TWD)</option>
+            <option value="CZK">Czech Koruna (CZK)</option>
+        </select>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br><br></div>
+        <div class="button-container">
+            <button onclick="convertCurrency()" class="convert-button"><b>Convert</b></button>
+           
+        </div>
+        <br><br>
+        
+     <div class="result-container">
+        <center><b><p id="result"></p></b></center>
+    </div>
+</div>
+
+    <br><br><br>
+</div>
+<button onclick="clearFields()" class="clear-button"><b>Clear</b></button>
+    <div class="find-container">
+       <p><font size="5">Find other countries</font></p>
+       <a href="findcontries.html"> <button class="Click">Click Here!</button></a> 
+   
+    </div>
+    
+    
+</body>
+</html>
+    

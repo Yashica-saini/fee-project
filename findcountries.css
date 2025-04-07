@@ -1,0 +1,101 @@
+body {
+    background-color: #fff;
+    background-image: url("laptop3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make sure the body takes the full viewport height */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    background: transparent;
+    border:2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(20px);
+    /* background-color: #d4e0f9; */
+    box-shadow: inset 5px 5px 10px #d1d1d1, inset -5px -5px 10px #ffffff;
+    width: 80%; 
+    max-width: 600px; 
+    padding: 0px; 
+    margin: auto;
+    background: linear-gradient(145deg, white, grey); 
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+                        -5px -5px 10px rgba(255, 255, 255, 0.7);
+            width: 400px;
+            transition: transform 0.3s;
+
+}
+
+.left-side {
+    margin-left: 2px;
+    padding-left: 2px;
+    width: 200px;
+    text-align: left;
+}
+
+.left-side p {
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.right-side {
+    margin-right: 2px;
+    padding-right: 2px; 
+    width: 200px;
+    text-align: right;
+}
+
+.center-side {
+    text-align: center;
+    width: 100px;
+    margin-left: 50px;
+}
+
+.center-side p {
+    text-align: center;
+}
+
+.currency, .currency2 {
+    margin-bottom: 10px;
+}
+
+.info {
+    text-decoration: none;
+    color:black;
+}
+
+.info:hover {
+    color:#8E44AD ;
+}
+
+.flag {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+} 
+}   
+

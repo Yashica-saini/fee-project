@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            background-image:url("Screenshot 2024-10-27 000105.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: transparent;
+            border:2px solid rgba(255,255,255, .2);
+            backdrop-filter: blur(20px);
+            
+            padding: 40px;
+            box-shadow: 0px 0px 10px rgba(0,0,0, .2);
+            color: #fff;
+            width: 400px;
+            transition: transform 0.3s;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 15px;            
+            /* box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2),
+                        -20px -20px 30px rgba(255, 255, 255, 0.7); */
+            width: 400px;
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #f9f5f5;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #f5f2f2;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+                        inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color:grey;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color:black;
+            transform: translateY(-2px);
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.4rem;
+    } 
+}   
+    
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <h1>Sign In</h1>
+        <form id="email" action="home.html" method="post">
+            <label for="emailInput"><b>Email</b></label>
+            <input type="email" id="emailInput" placeholder="you@example.com" required>
+
+            <label for="passwordInput"><b>Password</b></label>
+            <input type="password" id="passwordInput" placeholder=" " required>
+
+            <button type="submit"> <a href="#home.html"></a>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
